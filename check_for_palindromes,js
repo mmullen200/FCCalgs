@@ -1,0 +1,28 @@
+
+function palindrome(str) {
+  
+  var newStringArray = [];
+  var newString = str.toLowerCase();
+  console.log(newString);
+  newString = newString.replace(/[^a-z0-9s]/g, '');
+  
+  
+  var stringArray = newString.split("");
+  
+  for (var i = stringArray.length - 1; i >=0; i--) {
+    
+      newStringArray.push(stringArray[i]);
+      console.log(newStringArray);
+  }
+  var finalString = newStringArray.join("");
+  
+  if (finalString === newString) {
+     return true;
+  } else {
+    return false;
+  }
+ 
+ 
+}
+
+palindrome("eye");
